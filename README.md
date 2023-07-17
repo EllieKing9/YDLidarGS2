@@ -1,6 +1,42 @@
 # YDLidarGS2
 
-files
+c/cpp file
+```
+unix_timer.cpp
+unix_serial.cpp
+serial.c
+ydlidar_driver.cpp
+list_ports_linux.cpp
+CYdLidar.cpp
+new_test_lidar_copy.c
+```
+
+include
+```
+timer.h
+unix_serial.h
+serial.h
+common.h
+ydlidar_driver.h
+CYdLidar.h
+unix_serial.h
+timer.h
+v8stdint.h
+angles.h
+utils.h
+locker.h
+thread.h
+ydlidar_protocol.h
+help_info.h
+```
+
+complie
+```
+aarch64-linux-gnu-g++ -o test_arm64 CYdLidar.cpp unix_timer.cpp unix_serial.cpp serial.c ydlidar_driver.cpp list_ports_linux.cpp new_test_lidar_copy.c -lpthread -static
+```
+
+
+files struct
 ```
 unix_timer.cpp
   -> #include "timer.h"
@@ -151,37 +187,3 @@ new_test_lidar_copy.c
   #include <cctype>
 ```
 
-c/cpp file
-```
-unix_timer.cpp
-unix_serial.cpp
-serial.c
-ydlidar_driver.cpp
-list_ports_linux.cpp
-CYdLidar.cpp
-new_test_lidar_copy.c
-```
-
-include
-```
-timer.h
-unix_serial.h
-serial.h
-common.h
-ydlidar_driver.h
-CYdLidar.h
-unix_serial.h
-timer.h
-v8stdint.h
-angles.h
-utils.h
-locker.h
-thread.h
-ydlidar_protocol.h
-help_info.h
-```
-
-
-```
-aarch64-linux-gnu-g++ -o test_arm64 CYdLidar.cpp unix_timer.cpp unix_serial.cpp serial.c ydlidar_driver.cpp list_ports_linux.cpp new_test_lidar_copy.c -lpthread -static
-```
